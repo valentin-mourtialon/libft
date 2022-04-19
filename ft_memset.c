@@ -1,5 +1,4 @@
-#include <stddef.h>
-#include <stdio.h>
+#include <libft.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {
@@ -13,7 +12,7 @@ void	*ft_memset(void *s, int c, size_t n)
 /*
 #include <stdlib.h>
 #include <string.h>
-
+#include <stdio.h>
 int	main(int ac, char **av)
 {
 	if (ac == 4)
