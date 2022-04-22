@@ -24,6 +24,26 @@ int	is_in_set(char c, char const *set)
 	return (0);
 }
 
+int	set_shift_and_nb_char_to_trim(
+		char const *s1, 
+		char const *set, 
+		size_t *shift, 
+		size_t *nb_char_to_trim)
+{
+	int	s1_length;
+
+	if (is_in_set(s1[0], set))
+	{
+		(*shift)++;
+		(*nb_char_to_trim)++;
+	}
+	s1_length = ft_strlen(s1);
+	if (is_in_set(s1[s1_length - 1], set))
+		(*nb_char_to_trim)++;
+	return (s1_length);
+}
+
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*output;
@@ -31,18 +51,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	nb_char_to_trim;
 	size_t	shift;
 	size_t	i;
-	
+
+	if (s1 == NULL || set == NULL)
+		return (NULL);	
 	shift = 0;
 	nb_char_to_trim = 0;
-	if (is_in_set(s1[0], set))
-	{
-		shift++;
-		nb_char_to_trim++;
-	}
-	s1_length = ft_strlen(s1);
-	if (is_in_set(s1[s1_length - 1], set))
-		nb_char_to_trim++;
+	s1_length = set_shift_and_nb_char_to_trim(s1, set, &shift, &nb_char_to_trim);
 	output = malloc((s1_length - nb_char_to_trim) * sizeof(char));
+	if (!output)
+		return (NULL);
 	i = 0;
 	while (i < s1_length - nb_char_to_trim)
 	{
