@@ -1,16 +1,6 @@
 #include "libft.h"
 
-int	ft_strlen(char const *str)
-{
-	int	len;
-
-	len = 0;
-	while (*str++)
-		len++;
-	return (len);
-}
-
-int	is_in_set(char c, char const *set)
+static int	is_in_set(char c, char const *set)
 {
 	int	i;
 
@@ -24,13 +14,13 @@ int	is_in_set(char c, char const *set)
 	return (0);
 }
 
-int	set_shift_and_nb_char_to_trim(
+static int	set_shift_and_nb_char_to_trim(
 		char const *s1, 
 		char const *set, 
 		size_t *shift, 
 		size_t *nb_char_to_trim)
 {
-	int	s1_length;
+	size_t	s1_length;
 
 	if (is_in_set(s1[0], set))
 	{

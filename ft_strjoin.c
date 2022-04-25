@@ -1,21 +1,12 @@
 #include "libft.h"
 
-int	ft_strlen(char *s)
-{
-	int	len;
-
-	len = 0;
-	while (*s++)
-		len++;
-	return (len);
-}
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*output;
-	int	s1_length;
-	int	s2_length;
-	int	i;
+	size_t	s1_length;
+	size_t	s2_length;
+	size_t	total_length;
+	size_t	i;
 	
 	s1_length = ft_strlen(s1);
 	s2_length = ft_strlen(s2);
@@ -35,5 +26,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 	}
 	output[i] = '\0';
-	return (output)
+	return (output);
 }

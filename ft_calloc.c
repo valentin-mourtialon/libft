@@ -5,9 +5,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*output;
 	size_t	i;
 
-	if (nmemb == 0)
+	if (size != 0 && nmemb > INT_MAX / size)
 		return (NULL);
 	output = malloc(nmemb * size);
+	if (!output)
+		return (NULL);
 	i = 0;
 	while (i < nmemb)
 		((unsigned char *)output)[i++] = 0;

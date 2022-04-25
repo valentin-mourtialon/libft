@@ -14,13 +14,11 @@ int	ft_atoi(const char *nptr)
 	while (nptr[i] == '+' || nptr[i] == '-')
 	{
 		if (nptr[i] == '-' && c == 0)
-		{
-			sign *= -1;
-			c++;
-		}
+			sign *= -1;	
 		else if (c > 0)
 			return (0);
 		i++;
+		c++;
 	}
 	while ('0' <= nptr[i] && nptr[i] <= '9' && nptr[i])
 		output = output * 10 + (nptr[i++] - 48);	
@@ -34,7 +32,7 @@ int	main(int ac, char **av)
 {
 	if (ac == 2)
 	{
-		const char	*str = NULL;
+		//const char	*str = NULL;
 			
 		printf("ORIGINAL OUTPUT : %d\n", atoi(av[1]));
 		printf("MY OUTPUT       : %d\n", ft_atoi(av[1]));

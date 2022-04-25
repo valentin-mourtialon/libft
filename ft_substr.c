@@ -1,15 +1,5 @@
 #include "libft.h"
 
-unsigned int	ft_strlen(char const *s)
-{
-	unsigned int	len;
-
-	len = 0;
-	while (*s++)
-		len++;
-	return (len);
-}
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char		*output;

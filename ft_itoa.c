@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int	count_digits(int n)
+static int	count_digits(int n)
 {
 	int	nb_of_digits;
 
@@ -16,7 +16,7 @@ int	count_digits(int n)
 	return (nb_of_digits);
 }
 
-int	compute_ten_power(int power)
+static int	compute_ten_power(int power)
 {
 	if (power == 0)
 		return (1);
@@ -25,7 +25,7 @@ int	compute_ten_power(int power)
 	return (10 * compute_ten_power(power - 1));
 }
 
-char	*alloc_space_for_digits(int n, int nb_of_digits)
+static char	*alloc_space_for_digits(int n, int nb_of_digits)
 {
 	char	*nbr;
 

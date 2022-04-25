@@ -1,4 +1,4 @@
-int     ft_islower(int c)
+/*int     ft_islower(int c)
 {
 	if ('a' <= c && c <= 'z')
 		return (1);
@@ -28,14 +28,16 @@ int     ft_isdigit(int c)
 		return (1);
 	else
 		return (0);
-}
+}*/
+
+#include "libft.h"
 
 int     ft_isalnum(int c)
 {
         if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	else
-		return (0):
+		return (0);
 }
 
 
