@@ -38,7 +38,7 @@ int	main(int ac, char **av)
 		printf("MY OUTPUT       : ");
 		ft_putmem(output, atoi(av[1]));
 		free(output);
-			
+	
 		output = calloc(atoi(av[1]), atoi(av[2]));
 		printf("ORIGINAL OUTPUT : ");
 		ft_putmem(output, atoi(av[1]));

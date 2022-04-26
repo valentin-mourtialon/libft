@@ -3,12 +3,11 @@
 char	*ft_strdup(const char *s)
 {
 	char 	*output;
-	int	i;
+	size_t	len;
+	size_t	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	output = (char *)malloc(i * sizeof(char));
+	len = ft_strlen(s);
+	output = malloc((len + 1) * sizeof(char));
 	if (!output)
 		return (NULL);
 	i = 0;
