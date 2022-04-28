@@ -1,16 +1,16 @@
 #include "libft.h"
 
-static int	count_digits(int n)
+static int	count_digits(long int p)
 {
-	int	nb_of_digits;
-
-	if (n < 0)
-		n *= -1;
+	int		nb_of_digits;
+	
+	if (p < 0)
+		p *= -1;
 	nb_of_digits = 0;
-	while (n > 9)
+	while (p > 9)
 	{
 		nb_of_digits++;
-		n /= 10;
+		p /= 10;
 	}
 	nb_of_digits++;
 	return (nb_of_digits);
@@ -25,11 +25,11 @@ static int	compute_ten_power(int power)
 	return (10 * compute_ten_power(power - 1));
 }
 
-static char	*alloc_space_for_digits(int n, int nb_of_digits)
+static char	*alloc_space_for_digits(long int p, int nb_of_digits)
 {
 	char	*nbr;
 
-	if (n < 0)
+	if (p < 0)
 		nb_of_digits++;
 	nbr = malloc((nb_of_digits + 1) * sizeof(char));
 	if (!nbr)
@@ -39,26 +39,29 @@ static char	*alloc_space_for_digits(int n, int nb_of_digits)
 
 char	*ft_itoa(int n)
 {
-	int	nb_of_digits;
-	int	i;
-	int	shift;
-	char	*nbr;
+	int		nb_of_digits;
+	int		i;
+	int		shift;
+	long int	p;
+	char		*nbr;
 
-	nb_of_digits = count_digits(n);
-	nbr = alloc_space_for_digits(n, nb_of_digits);
+	p = (long int)n;
+	nb_of_digits = count_digits(p);
+	nbr = alloc_space_for_digits(p, nb_of_digits);
 	i = 0;
 	shift = 0;
-	if (n < 0)
+	if (p < 0)
 	{
 		nbr[i++] = '-';
 		shift++;
-		n *= -1;
+		p *= -1;
 	}
 	while (i < nb_of_digits + shift)
 	{
-		 nbr[i] = n / compute_ten_power(nb_of_digits - (i + 1 - shift)) + '0';
-		 n %= compute_ten_power(nb_of_digits - (i++ + 1 - shift));
+		 nbr[i] = p / compute_ten_power(nb_of_digits - (i + 1 - shift)) + '0';
+		 p %= compute_ten_power(nb_of_digits - (i++ + 1 - shift));
 	}
+	nbr[i] = '\0';
 	return (nbr);
 }
 /*

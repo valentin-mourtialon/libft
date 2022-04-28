@@ -12,6 +12,8 @@ static int	count_words(char const *s, char c)
 	int	i;
 	int	nb_of_words;
 
+	if (!(*s))
+		return (0);
 	nb_of_words = 0;
 	if (!is_sep(s[0], c))
 		nb_of_words++;
@@ -32,13 +34,14 @@ static void	alloc_space_for_words(char **split, char const *str, char c)
 
 	word_position = 0;
 	while (*str)
-	{
+	{		
 		while (is_sep(*str, c) && *str)
 			str++;
 		i = 0;
-		while (!is_sep(str[i], c) && *str)
+		while (!is_sep(str[i], c) && str[i])
 			i++;
-		split[word_position] = malloc((i + 1) * sizeof(char));
+		if (i != 0)
+			split[word_position] = malloc((i + 1) * sizeof(char));
 		word_position++;
 		str = (str + i);
 	}
@@ -71,7 +74,7 @@ char	**ft_split(char const *s, char c)
 {
 	char 	**split;
 	int	nb_of_words;
-
+	
 	nb_of_words = count_words(s, c);
 	split = malloc((nb_of_words + 1) * sizeof(char *));
 	if (!split)
@@ -81,9 +84,8 @@ char	**ft_split(char const *s, char c)
 	split[nb_of_words] = NULL;
 	return (split);
 }
-/*
-#include <stdio.h>
 
+/*
 int	main(int ac, char **av)
 {
 	if (ac == 3)
@@ -94,9 +96,14 @@ int	main(int ac, char **av)
 
 		nb_of_words = count_words(av[1], *av[2]);
 		split = ft_split(av[1], *av[2]);
+		printf("\nexecution done\n");
 		i = 0;
 		while (i < nb_of_words)
-			printf("\t%s\n", split[i++]);	
+			printf("\t%s\n", split[i++]);
+		printf("\n");
+		while (i >= 0)
+			free(split[i--]);
+		free(split);	
 	}
 	return (0);
 }*/

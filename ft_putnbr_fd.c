@@ -4,19 +4,28 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	char	*n_str;
+
 	if (n == INT_MIN)
-		ft_putstr_fd(ft_itoa(INT_MIN), fd);
-	if (n < 0)
 	{
-		n *= -1;
-		ft_putchar_fd('-', fd);
+		n_str = ft_itoa(INT_MIN);
+		ft_putstr_fd(n_str, fd);
+		free(n_str);
 	}
-	if (n <= 9)
-		ft_putchar_fd(n + '0', fd);
-	else
+	else 
 	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
+		if (n < 0)
+		{
+			n *= -1;
+			ft_putchar_fd('-', fd);
+		}
+		if (n <= 9)
+			ft_putchar_fd(n + '0', fd);
+		else
+		{
+			ft_putnbr_fd(n / 10, fd);
+			ft_putnbr_fd(n % 10, fd);
+		}
 	}
 }
 /*
