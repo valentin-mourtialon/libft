@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/05/05 14:34:16 by vmourtia          #+#    #+#              #
+#    Updated: 2022/05/05 16:14:23 by vmourtia         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRCS		=	ft_atoi.c \
 				ft_bzero.c \
 				ft_calloc.c \
@@ -35,7 +47,12 @@ SRCS		=	ft_atoi.c \
 
 OBJS		=	${SRCS:.c=.o}
 
-SRCS_BONUS	=	ft_lstnew.c
+SRCS_BONUS	=	ft_lstnew.c \
+				ft_lstadd_front.c \
+				ft_lstsize.c \
+				ft_lstlast.c \
+				ft_lstadd_back.c \
+
 
 OBJS_BONUS	=	${SRCS_BONUS:.c=.o}
 
