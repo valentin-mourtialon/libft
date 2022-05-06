@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 12:01:01 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/05 12:01:07 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/06 11:29:56 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ int	ft_atoi(const char *nptr)
 	while (nptr[i] == '+' || nptr[i] == '-')
 	{
 		if (nptr[i] == '-' && c == 0)
-			sign *= -1;	
+			sign *= -1;
 		else if (c > 0)
 			return (0);
 		i++;
 		c++;
 	}
 	while ('0' <= nptr[i] && nptr[i] <= '9' && nptr[i])
-		output = output * 10 + (nptr[i++] - 48);	
+		output = output * 10 + (nptr[i++] - 48);
 	return (sign * output);
 }
 /*

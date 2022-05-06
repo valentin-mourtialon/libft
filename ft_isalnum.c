@@ -1,34 +1,14 @@
-/*int     ft_islower(int c)
-{
-	if ('a' <= c && c <= 'z')
-		return (1);
-        else
-		return (0);
-}
-
-int     ft_isupper(int c)
-{
-	if ('A' <= c && c <= 'Z')
-		return (1);
-	else
-		return (0);
-}
-
-int     ft_isalpha(int c)
-{
-        if (ft_islower(c) || ft_isupper(c))
-	        return (1);
-	else
-		return (0);
-}
-
-int     ft_isdigit(int c)
-{
-	if ('0' <= c && c <= '9')
-		return (1);
-	else
-		return (0);
-}*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/06 11:33:09 by vmourtia          #+#    #+#             */
+/*   Updated: 2022/05/06 11:33:16 by vmourtia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 

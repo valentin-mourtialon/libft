@@ -6,7 +6,7 @@
 #    By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/05 14:34:16 by vmourtia          #+#    #+#              #
-#    Updated: 2022/05/05 16:14:23 by vmourtia         ###   ########.fr        #
+#    Updated: 2022/05/06 10:36:40 by vmourtia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,10 @@ SRCS_BONUS	=	ft_lstnew.c \
 				ft_lstsize.c \
 				ft_lstlast.c \
 				ft_lstadd_back.c \
+				ft_lstdelone.c \
+				ft_lstclear.c \
+				ft_lstiter.c \
+				ft_lstmap.c
 
 
 OBJS_BONUS	=	${SRCS_BONUS:.c=.o}
