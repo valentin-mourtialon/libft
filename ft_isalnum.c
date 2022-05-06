@@ -6,18 +6,16 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:33:09 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/06 11:33:16 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/06 11:46:52 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-        if (ft_isalpha(c) || ft_isdigit(c))
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	else
 		return (0);
 }
-
-

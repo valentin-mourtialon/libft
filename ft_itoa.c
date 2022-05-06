@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:37:08 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/06 11:37:11 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/06 11:48:26 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	count_digits(long int p)
 {
 	int		nb_of_digits;
-	
+
 	if (p < 0)
 		p *= -1;
 	nb_of_digits = 0;
@@ -51,9 +51,9 @@ static char	*alloc_space_for_digits(long int p, int nb_of_digits)
 
 char	*ft_itoa(int n)
 {
-	int		nb_of_digits;
-	int		i;
-	int		shift;
+	int			nb_of_digits;
+	int			i;
+	int			shift;
 	long int	p;
 	char		*nbr;
 
@@ -70,8 +70,8 @@ char	*ft_itoa(int n)
 	}
 	while (i < nb_of_digits + shift)
 	{
-		 nbr[i] = p / compute_ten_power(nb_of_digits - (i + 1 - shift)) + '0';
-		 p %= compute_ten_power(nb_of_digits - (i++ + 1 - shift));
+		nbr[i] = p / compute_ten_power(nb_of_digits - (i + 1 - shift)) + '0';
+		p %= compute_ten_power(nb_of_digits - (i++ + 1 - shift));
 	}
 	nbr[i] = '\0';
 	return (nbr);

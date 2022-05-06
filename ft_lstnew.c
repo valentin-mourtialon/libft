@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 12:00:51 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/05 15:09:10 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/06 12:08:10 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
-	
+
 	new = malloc(sizeof(t_list));
 	if (!new)
-		return (NULL);	
+		return (NULL);
 	new->content = content;
 	new->next = NULL;
 	return (new);
