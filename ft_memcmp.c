@@ -6,13 +6,12 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:38:16 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/06 11:38:17 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/06 15:04:55 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdio.h>
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;

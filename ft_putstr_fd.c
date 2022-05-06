@@ -6,19 +6,14 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:38:49 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/06 11:38:50 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/06 15:09:42 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		ft_putchar_fd(s[i++], fd);
-	}
+	if (s)
+		write(fd, s, ft_strlen(s));
 }

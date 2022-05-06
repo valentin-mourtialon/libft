@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:38:21 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/06 11:38:22 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/06 15:06:05 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	{
 		i = 0;
 		while (n-- > 0)
-			((unsigned char *)dest)[i++] = *((unsigned char *)src++);	
+			((unsigned char *)dest)[i++] = *((unsigned char *)src++);
 	}
 	return (dest);
 }
@@ -36,8 +36,10 @@ int	main(int ac, char **av)
 	if (ac == 4)
 	{
 		printf("src = %s\tdest = %s\n", av[2], av[1]);
-		printf("Original : dest = %s\n", (unsigned char *)memcpy(av[1], av[2], atoi(av[3])));
-		printf("ft_memcpy : dest = %s", (unsigned char *)ft_memcpy(av[1], av[2], atoi(av[3])));
+		printf("Original : dest = %s\n", 
+		(unsigned char *)memcpy(av[1], av[2], atoi(av[3])));
+		printf("ft_memcpy : dest = %s", 
+		(unsigned char *)ft_memcpy(av[1], av[2], atoi(av[3])));
 	}
 	printf("\n");
 	return (0);

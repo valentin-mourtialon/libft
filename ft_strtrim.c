@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:39:38 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/06 11:39:39 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/06 15:25:49 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static int	count_char(char const *s1, char const *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*output;
-	int	nb_of_char;
+	int		nb_of_char;
 	size_t	i;
 
 	nb_of_char = count_char(s1, set);

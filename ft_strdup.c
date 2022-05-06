@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:39:01 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/06 11:39:02 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/06 15:22:13 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strdup(const char *s)
 {
-	char 	*output;
+	char	*output;
 	size_t	len;
 	size_t	i;
 

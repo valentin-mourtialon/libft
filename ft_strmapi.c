@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:39:23 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/06 11:39:24 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/06 15:27:20 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	unsigned int	len;
-	char	*s_transformed;
+	char			*s_transformed;
 
 	len = ft_strlen(s);
 	s_transformed = malloc((len + 1) * sizeof(char));

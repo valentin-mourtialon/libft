@@ -6,13 +6,11 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:38:45 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/06 11:38:46 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/06 15:07:19 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*#include <stdio.h>*/
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -24,7 +22,7 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putstr_fd(n_str, fd);
 		free(n_str);
 	}
-	else 
+	else
 	{
 		if (n < 0)
 		{
