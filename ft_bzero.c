@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:30:34 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/06 14:58:53 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/09 10:00:35 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	if (s != NULL)
-	{
-		while (n-- > 0)
-			*((unsigned char *)s++) = '\0';
-	}
+	while (n-- > 0)
+		*((unsigned char *)s++) = '\0';
 }
 /*
 #include <stdlib.h>

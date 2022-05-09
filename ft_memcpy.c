@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:38:21 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/06 15:06:05 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/09 10:04:09 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int	i;
+	size_t	i;
 
-	if (src == NULL || dest == NULL)
+	if (src == NULL && dest == NULL)
 		return (NULL);
-	else
-	{
-		i = 0;
-		while (n-- > 0)
-			((unsigned char *)dest)[i++] = *((unsigned char *)src++);
-	}
+	i = 0;
+	while (i < n)
+		((unsigned char *)dest)[i++] = *((unsigned char *)src++);
+	//}
 	return (dest);
 }
 /*

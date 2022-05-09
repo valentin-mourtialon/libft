@@ -6,7 +6,7 @@
 #    By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/05 14:34:16 by vmourtia          #+#    #+#              #
-#    Updated: 2022/05/06 10:36:40 by vmourtia         ###   ########.fr        #
+#    Updated: 2022/05/09 11:54:58 by vmourtia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,6 +84,10 @@ clean:
 
 fclean:			clean
 				${RM} ${NAME}
+
+#so:				
+#				$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
+#				gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 re:				fclean all
 
