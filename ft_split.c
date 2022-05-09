@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:38:53 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/06 15:21:45 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/09 15:07:11 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,8 @@ char	**ft_split(char const *s, char c)
 	char	**split;
 	int		nb_of_words;
 
+	if (!s)
+		return (NULL);
 	nb_of_words = count_words(s, c);
 	split = malloc((nb_of_words + 1) * sizeof(char *));
 	if (!split)

@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:38:16 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/09 11:43:00 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/09 15:17:00 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	size_t			i;
 	unsigned char	*c1;
 	unsigned char	*c2;
-	
+
 	c1 = (unsigned char *)s1;
 	c2 = (unsigned char *)s2;
 	i = 0;

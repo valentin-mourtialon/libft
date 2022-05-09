@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:38:21 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/09 10:04:09 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/09 15:18:52 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	while (i < n)
 		((unsigned char *)dest)[i++] = *((unsigned char *)src++);
-	//}
 	return (dest);
 }
 /*

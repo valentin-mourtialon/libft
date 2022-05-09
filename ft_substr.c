@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:39:42 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/06 15:26:28 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/09 15:09:23 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	s_length;
 
+	if (!s)
+		return (NULL);
 	s_length = ft_strlen(s);
 	if (start + len > s_length && start <= s_length)
 		output = malloc((s_length - start + 1) * sizeof(char));

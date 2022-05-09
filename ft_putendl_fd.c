@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:38:40 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/06 11:38:41 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/09 15:06:29 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		ft_putchar_fd(s[i++], fd);
-	}
+	if (s)
+		write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }

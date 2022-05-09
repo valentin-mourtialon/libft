@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:32:50 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/06 11:32:54 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/09 15:16:32 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,46 +15,29 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*output;
-	size_t	i;
 
 	if (size != 0 && nmemb > INT_MAX / size)
 		return (NULL);
 	output = malloc(nmemb * size);
 	if (!output)
 		return (NULL);
-	i = 0;
-	while (i < nmemb)
-		((unsigned char *)output)[i++] = 0;
+	ft_bzero(output, nmemb);
 	return (output);
 }
+
 /*
 #include <stdio.h>
+#include <string.h>
 
-void	ft_putmem(void *output, size_t nmemb)
+int	main(void)
 {
-	size_t	i;
+	int		size = 8539;
+	void 	*d1 = ft_calloc(size, sizeof(int));
+	void 	*d2 = calloc(size, sizeof(int));
 
-	i = 0;
-	while (i < nmemb)
-		printf("%d", ((unsigned char *)output)[i++]);
-	printf("\n");
-}
-
-int	main(int ac, char **av)
-{
-	if (ac == 3)
-	{
-		void	*output;
-
-		output = ft_calloc(atoi(av[1]), atoi(av[2]));
-		printf("MY OUTPUT       : ");
-		ft_putmem(output, atoi(av[1]));
-		free(output);
-	
-		output = calloc(atoi(av[1]), atoi(av[2]));
-		printf("ORIGINAL OUTPUT : ");
-		ft_putmem(output, atoi(av[1]));
-		free(output);
-	}
-	return (0);
+	if (memcmp(d1, d2, size * sizeof(int)))
+		printf("KO\n");
+	free(d1);
+	free(d2);
+	printf("OK\n");
 }*/
