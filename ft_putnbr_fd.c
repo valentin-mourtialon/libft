@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:38:45 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/06 15:07:19 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/10 09:45:38 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,8 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*n_str;
-
 	if (n == INT_MIN)
-	{
-		n_str = ft_itoa(INT_MIN);
-		ft_putstr_fd(n_str, fd);
-		free(n_str);
-	}
+		ft_putstr_fd("-2147483648", fd);
 	else
 	{
 		if (n < 0)

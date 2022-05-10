@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:37:08 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/09 13:20:19 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/10 09:45:34 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,16 @@ static char	*alloc_space_for_digits(long int p, int nb_of_digits)
 	return (nbr);
 }
 
+static void	check_negative_numbers(long int *p, int *i, int *shift, char **nbr)
+{
+	if (*p < 0)
+	{
+		(*nbr)[(*i)++] = '-';
+		(*shift)++;
+		*p *= -1;
+	}
+}
+
 char	*ft_itoa(int n)
 {
 	int			nb_of_digits;
@@ -60,14 +70,11 @@ char	*ft_itoa(int n)
 	p = (long int)n;
 	nb_of_digits = count_digits(p);
 	nbr = alloc_space_for_digits(p, nb_of_digits);
+	if (!nbr)
+		return (NULL);
 	i = 0;
 	shift = 0;
-	if (p < 0)
-	{
-		nbr[i++] = '-';
-		shift++;
-		p *= -1;
-	}
+	check_negative_numbers(&p, &i, &shift, &nbr);
 	while (i < nb_of_digits + shift)
 	{
 		nbr[i] = p / compute_ten_power(nb_of_digits - (i + 1 - shift)) + '0';
