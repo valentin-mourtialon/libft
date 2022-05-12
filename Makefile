@@ -6,7 +6,7 @@
 #    By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/05 14:34:16 by vmourtia          #+#    #+#              #
-#    Updated: 2022/05/10 09:45:25 by vmourtia         ###   ########.fr        #
+#    Updated: 2022/05/12 09:56:08 by vmourtia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,15 +47,15 @@ SRCS		=	ft_atoi.c \
 
 OBJS		=	${SRCS:.c=.o}
 
-SRCS_BONUS	=	ft_lstnew.c \
-				ft_lstadd_front.c \
-				ft_lstsize.c \
-				ft_lstlast.c \
-				ft_lstadd_back.c \
-				ft_lstdelone.c \
-				ft_lstclear.c \
-				ft_lstiter.c \
-				ft_lstmap.c
+SRCS_BONUS	=	ft_lstnew_bonus.c \
+				ft_lstadd_front_bonus.c \
+				ft_lstsize_bonus.c \
+				ft_lstlast_bonus.c \
+				ft_lstadd_back_bonus.c \
+				ft_lstdelone_bonus.c \
+				ft_lstclear_bonus.c \
+				ft_lstiter_bonus.c \
+				ft_lstmap_bonus.c
 
 
 OBJS_BONUS	=	${SRCS_BONUS:.c=.o}
@@ -84,10 +84,6 @@ clean:
 
 fclean:			clean
 				${RM} ${NAME}
-
-#so:				
-#				$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
-#				gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 re:				fclean all
 
