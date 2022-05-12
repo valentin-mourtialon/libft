@@ -6,7 +6,7 @@
 /*   By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:32:50 by vmourtia          #+#    #+#             */
-/*   Updated: 2022/05/09 15:16:32 by vmourtia         ###   ########.fr       */
+/*   Updated: 2022/05/12 11:36:14 by vmourtia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	output = malloc(nmemb * size);
 	if (!output)
 		return (NULL);
-	ft_bzero(output, nmemb);
+	ft_bzero(output, nmemb * size);
 	return (output);
 }
 
