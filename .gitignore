@@ -2,6 +2,7 @@
 *.o
 env.txt
 /libftTester
+/libft-war-machine
 *.a
 *.gch
 *.swp
