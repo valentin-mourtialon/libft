@@ -6,7 +6,7 @@
 #    By: vmourtia <vmourtia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/05 14:34:16 by vmourtia          #+#    #+#              #
-#    Updated: 2022/05/12 09:56:08 by vmourtia         ###   ########.fr        #
+#    Updated: 2022/06/24 12:13:19 by vmourtia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,6 +85,7 @@ clean:
 fclean:			clean
 				${RM} ${NAME}
 
-re:				fclean all
+re:				fclean 
+				all
 
 .PHONY:			all bonus clean fclean re
